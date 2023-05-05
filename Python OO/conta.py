@@ -1,5 +1,3 @@
-
-
 class Conta():
     def __init__(self,numero,titular,saldo,limite,*args,**kargs):
         self.__numero = numero

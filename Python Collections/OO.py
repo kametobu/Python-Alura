@@ -2,7 +2,6 @@ from abc import ABCMeta,abstractclassmethod
 from operator import attrgetter
 from functools import total_ordering
 
-
 class Conta(metaclass=ABCMeta):
     def __init__(self,codigo):
         self._codigo = codigo
@@ -132,9 +131,7 @@ conta_luan.deposita(2000)
 conta_murilo = ContaSalario(133)
 conta_murilo.deposita(500)
 
-
 contas = [conta_alann,conta_luan,conta_murilo]
-
 
 for conta in contas:
     print(conta)
@@ -145,7 +142,6 @@ def extrai_saldo(conta):
 for conta in sorted(contas, key=attrgetter("_saldo")):
     print(conta)
 
-
 for conta in sorted(contas):
     print(conta)
 
@@ -154,7 +150,6 @@ for conta in sorted(contas, key=attrgetter("_saldo","_codigo")):
 
 for conta in sorted(contas):
     print(conta)
-
 
 print(conta_alann <= conta_luan)
 print(conta_alann <= conta_murilo)
